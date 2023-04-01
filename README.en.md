@@ -222,7 +222,7 @@ services:
       # access password，optional
       AUTH_SECRET_KEY: xxx
       # timeout, in milliseconds, optional
-      TIMEOUT_MS: 60000
+      TIMEOUT_MS: 60000000
       # socks proxy, optional, effective with SOCKS_PROXY_PORT
       SOCKS_PROXY_HOST: xxxx
       # socks proxy port, optional, effective with SOCKS_PROXY_HOST

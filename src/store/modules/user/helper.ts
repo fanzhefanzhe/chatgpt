@@ -13,13 +13,13 @@ export interface UserState {
 }
 
 export function defaultSetting(): UserState {
-  return {
-    userInfo: {
-      avatar: 'https://raw.githubusercontent.com/Chanzhaoyu/chatgpt-web/main/src/assets/avatar.jpg',
-      name: 'ChenZhaoYu',
-      description: 'Star on <a href="https://github.com/Chanzhaoyu/chatgpt-bot" class="text-blue-500" target="_blank" >Github</a>',
-    },
-  }
+	return {
+		userInfo: {
+			avatar: 'https://raw.githubusercontent.com/Chanzhaoyu/chatgpt-web/main/src/assets/avatar.jpg',
+			name: '公益GPT',
+			description: '<a href="https://ff.huijia.cf" class="text-blue-500" target="_blank" >购买账号点我！</a>余额点--->',
+		},
+	}
 }
 
 export function getLocalState(): UserState {

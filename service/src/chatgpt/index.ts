@@ -18,13 +18,14 @@ dotenv.config()
 const ErrorCodeMessage: Record<string, string> = {
   401: '[OpenAI] 提供错误的API密钥 | Incorrect API key provided',
   403: '[OpenAI] 服务器拒绝访问，请稍后再试 | Server refused to access, please try again later',
-  502: '[OpenAI] 错误的网关 |  Bad Gateway',
+	429: '抱歉，今日体验太火爆辣，余额用光了，不定时充值余额供大家体验（每天至少两次），详情请进入店铺：https://ff.huijia.cf',
+	502: '[OpenAI] 错误的网关 |  Bad Gateway',
   503: '[OpenAI] 服务器繁忙，请稍后再试 | Server is busy, please try again later',
   504: '[OpenAI] 网关超时 | Gateway Time-out',
   500: '[OpenAI] 服务器繁忙，请稍后再试 | Internal Server Error',
 }
 
-const timeoutMs: number = !isNaN(+process.env.TIMEOUT_MS) ? +process.env.TIMEOUT_MS : 30 * 1000
+const timeoutMs: number = !isNaN(+process.env.TIMEOUT_MS) ? +process.env.TIMEOUT_MS : 60 * 100000
 const disableDebug: boolean = process.env.OPENAI_API_DISABLE_DEBUG === 'true'
 
 let apiModel: ApiModel
